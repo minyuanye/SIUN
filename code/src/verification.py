@@ -28,15 +28,15 @@ class Verification():
         self.pyramid_sharps = []
 
     def start(self):
-        json_path=self.config.resource.generator_json_path
-        infos = json_path.split('generator')
-        infos = infos[1].split('.')
-        json_info = infos[0]
-        weights_path=self.config.resource.generator_weights_path
-        infos = weights_path.split('generator')
-        infos = infos[1].split('.')
-        weights_info = infos[0]
-        print(f'json/weight:{json_info}/{weights_info}')
+        #json_path=self.config.resource.generator_json_path
+        #infos = json_path.split('generator')
+        #infos = infos[1].split('.')
+        #json_info = infos[0]
+        #weights_path=self.config.resource.generator_weights_path
+        #infos = weights_path.split('generator')
+        #infos = infos[1].split('.')
+        #weights_info = infos[0]
+        #print(f'json/weight:{json_info}/{weights_info}')
         print(f'verification strategy:{self.iters}')
         self.bestMetric = self.__getMetric()#init
         print(f'init metric:{self.bestMetric}')

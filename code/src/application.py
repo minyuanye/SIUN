@@ -26,11 +26,11 @@ class Application():
         pad = []
         for i in range(2):
             size = shape[i]
-            if(size % 32 == 0):
+            if(size % 256 == 0):
                 pad.append(0)
             else:
-                n = size // 32 + 1
-                pad.append((n*32 - size) // 2)
+                n = size // 256 + 1
+                pad.append((n*256 - size) // 2)
         return pad
 
     def __getImage(self,fileFullPath):#self.config.application.deblurring_file_path

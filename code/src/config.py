@@ -9,6 +9,7 @@ class Config:
     def __init__(self):
         self.resource = ResourceConfig()
         self.trainer = TrainConfig()
+        self.tester = TestConfig()
         self.application = Application()
 
 class ResourceConfig:
@@ -19,8 +20,8 @@ class ResourceConfig:
         self.debug_dir = os.environ.get("DEBUG_DIR", os.path.join(self.project_dir, "debug"))
         self.output_dir = os.environ.get("OUTPUT_DIR", os.path.join(self.project_dir, "output"))
         
-        self.generator_json_path = os.path.join(self.model_dir, "generator3.json")
-        self.generator_weights_path = os.path.join(self.model_dir, "generator3.h5")
+        self.generator_json_path = os.path.join(self.model_dir, "generator.json")
+        self.generator_weights_path = os.path.join(self.model_dir, "generator.h5")
         self.train_directory_path = "/mnt/SD_1/myye/Deblur/GoPro/train"
         self.test_directory_path = "/mnt/SD_1/myye/Deblur/GoPro/test"
 
@@ -38,9 +39,13 @@ class TrainConfig:
         self.maxEpoch = 2000
         self.gpu_num = 1
 
+class TestConfig:
+    def __init__(self):
+        self.iter = 0
+
 class Application:
     def __init__(self):
-        self.iter = 0#try all iter(2,3,4) if not specified
+        self.iter = 4#try all iter(1,2,3,4) if set 0
         self.deblurring_file_path = None
         self.deblurring_dir_path = None
         self.deblurring_result_dir = None

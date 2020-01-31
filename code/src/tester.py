@@ -17,27 +17,24 @@ class Tester():
         self.batch_sharps = []
         #metrics
         self.all_psnrs = {}
-        #feature
-        #self.measure = MLVMeasurement()
-        #self.sharpness = []
 
     def start(self):
-        if(self.config.application.iter == 0):
+        if(self.config.tester.iter == 0):
             self.iters = [1,2,3,4]
         else:
             self.iters = [self.config.application.iter]
         self.max_iter = max(self.iters)
         for iter in self.iters:
             self.all_psnrs[iter] = []
-        json_path=self.config.resource.generator_json_path
-        infos = json_path.split('generator')
-        infos = infos[1].split('.')
-        json_info = infos[0]
-        weights_path=self.config.resource.generator_weights_path
-        infos = weights_path.split('generator')
-        infos = infos[1].split('.')
-        weights_info = infos[0]
-        print(f'json/weight:{json_info}/{weights_info}')
+        #json_path=self.config.resource.generator_json_path
+        #infos = json_path.split('generator')
+        #infos = infos[1].split('.')
+        #json_info = infos[0]
+        #weights_path=self.config.resource.generator_weights_path
+        #infos = weights_path.split('generator')
+        #infos = infos[1].split('.')
+        #weights_info = infos[0]
+        #print(f'json/weight:{json_info}/{weights_info}')
         print(f'test strategy:{self.iters}')
         self.test()
 
@@ -127,4 +124,4 @@ class Tester():
         #with open(path, 'wb') as pfile:
         #  pickle.dump(self.sharpness, pfile, protocol=pickle.HIGHEST_PROTOCOL)
         calculate_data_n = len(best_psnrs)
-        print(f'{calculate_data_n}/{len(blurSharpParis)} done! Average PSNRs:{np.mean(best_psnrs)}')
+        print(f'{calculate_data_n}/{len(blurSharpParis)} done! Average PSNRs(Best):{np.mean(best_psnrs)}')
