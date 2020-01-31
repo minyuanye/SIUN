@@ -24,7 +24,7 @@ cd code
 ```
 
 ## Basic usage
-You can always add '--gpu=<ID>' to specify GPU ID, the default ID is 0.<br>
+You can always add '--gpu=<gpu_id>' to specify GPU ID, the default ID is 0.<br>
 
 1. For deblurring an image:<br>
 **python deblur.py --apply --file-path='</testpath/test.png>'**<br>
