@@ -49,7 +49,7 @@ When it finishes, run:<br>
 
 
 ## Advanced usage
-Please refer to the source code. Most configuration parameters are listed in './src/config.py'.
+Please refer to the source code. Most configuration parameters are listed in '/code/src/config.py'.
 
 ## Citation
 If you use any part of our code, or SIUN is useful for your research, please consider citing:
