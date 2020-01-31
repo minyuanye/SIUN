@@ -1,5 +1,5 @@
 # Scale-Iterative Upscaling Network for Image Deblurring
-by Minyuan Ye, Dong Lyu and Gengsheng Chen
+by Minyuan Ye, Dong Lyu and Gengsheng Chen ([pdf](http://lab.zhuzhuguowang.cn:36900/croxline/Paper/Scale-Iterative%20Upscaling%20Network%20for%20Image%20Deblurring.pdf))
 ### One real example
 ![/comparisions/images_in_paper/real_building1_comparision.png](../master/comparisons/images_in_paper/Real_building1_comparison.png)<br>
 (a) Result of Nah et al. (b) Result of Tao et al. (c) Result of Zhang et al. (d) Our result.
@@ -49,3 +49,20 @@ When it finishes, run:<br>
 
 ## Advanced usage
 Please refer to the source code. Most configuration parameters are listed in './src/config.py'.
+
+## Citation
+If you use any part of our code, or SIUN is useful for your research, please consider citing:
+```bibtex
+@ARTICLE{8963625,
+author={M. {Ye} and D. {Lyu} and G. {Chen}},
+journal={IEEE Access},
+title={Scale-Iterative Upscaling Network for Image Deblurring},
+year={2020},
+volume={8},
+number={},
+pages={18316-18325},
+keywords={Blind deblurring;curriculum learning;scale-iterative;upscaling network},
+doi={10.1109/ACCESS.2020.2967823},
+ISSN={2169-3536},
+month={},}
+```
