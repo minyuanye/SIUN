@@ -32,7 +32,7 @@ You can always add '--gpu=<gpu_id>' to specify GPU ID, the default ID is 0.<br>
 
 
 2. For deblurring all images in a folder:<br>
-**python deblur.py --apply --file-path='</testpath/test.png>'**<br>
+**python deblur.py --apply --dir-path='</testpath/testDir>'**<br>
 Add '--result-dir=</output_path>' to specify output path. If it is not specified, the default path is './output'.<br>
 
 3. For testing the model:<br>
