@@ -106,13 +106,13 @@ class Application():
             for fileFullPath in self.__fileBlurList:
                 imageBlur,imageOrigin = self.__getImage(fileFullPath)
                 deblurs = self.__deblur(imageBlur,imageOrigin)
-                infos = fileFullPath.rsplit('/', 1)
+                infos = os.path.basename(fileFullPath)
                 iter_times = len(deblurs)
                 for j in range(iter_times):
                     deblur = deblurs[j]
                     deblur = (deblur * 255).astype('uint8')
                     iter = self.iters[j]
-                    io.imsave(os.path.join(self.config.application.deblurring_result_dir, 'deblur'+str(iter)+'_'+infos[1]),deblur)
+                    io.imsave(os.path.join(self.config.application.deblurring_result_dir, 'deblur'+str(iter)+'_'+infos),deblur)
                 index += 1
                 print(f'{index}/{self.data_length} done!')
             print(f'all saved')
