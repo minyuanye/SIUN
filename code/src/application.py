@@ -35,6 +35,7 @@ class Application():
 
     def __getImage(self,fileFullPath):#self.config.application.deblurring_file_path
         imageBlur = img_as_float(io.imread(fileFullPath))
+        imageBlur=imageBlur[:,:,:3]
         #make sure row&col are even
         row = imageBlur.shape[0]
         col = imageBlur.shape[1]
