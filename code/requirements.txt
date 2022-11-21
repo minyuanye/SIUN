@@ -1,4 +1,4 @@
 h5py==2.7.1
-tensorflow-gpu==1.4.0
+tensorflow-gpu==2.9.3
 Keras==2.2.2
 scikit-image==0.14.3
